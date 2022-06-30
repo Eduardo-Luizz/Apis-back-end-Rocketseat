@@ -21,4 +21,9 @@ let author = "Eduardo"
 app.route('/').put( (request, response) => {
   author = request.body
   response.send(author)
-}); 
+});
+
+// DELETE
+app.route('/:identificador').delete( (request, response) => {
+  response.send(request.params.identificador) // Retorna o id que foi deletado
+})
